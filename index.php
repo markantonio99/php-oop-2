@@ -101,13 +101,6 @@ echo '<p>Disponibilità: ' . $gatto3->quantita_prodotto . '</p>';
 echo '</div>';
 
 
-
-
-
-
-
-
-
 echo "<h1>".$cane1->titolo_prodotto."</h1>";
 echo "<img src='".$cane1->immagine_prodotto."' alt='".$cane1->titolo_prodotto."'>";
 echo "<p>Prezzo: ".$cane1->prezzo_prodotto."</p>";
@@ -139,7 +132,7 @@ echo '</div>';
 
 <style>
     img{
-        max-width: 200px;
+        max-width: 210px;
     }
 
 </style>
