@@ -14,6 +14,8 @@ $gatto->immagine_prodotto = "cuccia_gatti.jpg";
 $gatto->prezzo_prodotto = 25.99;
 $gatto->quantita_prodotto = 10;
 $gatto->tipologia_prodotto = "categoria: Cuccia per gatti";
+$gatto->aggiungiLettiera("sabbia");
+
 
 $gatto2 = new gatti();
 $gatto2->titolo_prodotto = "Mangime per gatti";
@@ -36,7 +38,7 @@ $cane1->titolo_prodotto = "Mangime per cani";
 $cane1->immagine_prodotto = "mangime_cani.jpeg";
 $cane1->prezzo_prodotto = 12.99;
 $cane1->quantita_prodotto = 20;
-$cane1->tipologia_prodotto = "categoria: Mangime per cani";
+$cane1->setTipologiaProdotto("categoria: Mangime per cani");
 
 $cane2 = new cani();
 $cane2->titolo_prodotto = "Giochi per cane";
@@ -77,6 +79,7 @@ echo '<div class="card">';
 echo '<h2>' . $gatto->titolo_prodotto . '</h2>';
 echo '<img src="' . $gatto->immagine_prodotto . '">';
 echo '<p>' . $gatto->categoria_prodotto . ' - ' . $gatto->tipologia_prodotto . '</p>';
+echo '<p>Lettiera: ' . $gatto->lettiera . '</p>';
 echo '<p>Prezzo: ' . $gatto->prezzo_prodotto . '€</p>';
 echo '<p>Disponibilità: ' . $gatto->quantita_prodotto . '</p>';
 echo '</div>';
@@ -105,13 +108,11 @@ echo '</div>';
 
 
 
-echo '<div class="card">';
-echo '<h2>' . $cane1->titolo_prodotto . '</h2>';
-echo '<img src="' . $cane1->immagine_prodotto . '">';
-echo '<p>' . $cane1->categoria_prodotto . ' - ' . $cane1->tipologia_prodotto . '</p>';
-echo '<p>Prezzo: ' . $cane1->prezzo_prodotto . '€</p>';
-echo '<p>Disponibilità: ' . $cane1->quantita_prodotto . '</p>';
-echo '</div>';
+echo "<h1>".$cane1->titolo_prodotto."</h1>";
+echo "<img src='".$cane1->immagine_prodotto."' alt='".$cane1->titolo_prodotto."'>";
+echo "<p>Prezzo: ".$cane1->prezzo_prodotto."</p>";
+echo "<p>Quantità: ".$cane1->quantita_prodotto."</p>";
+echo "<p>".$cane1->tipologia_prodotto."</p>";
 
 echo '<div class="card">';
 echo '<h2>' . $cane2->titolo_prodotto . '</h2>';
