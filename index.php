@@ -132,7 +132,7 @@ echo '</div>';
 
 <style>
     img{
-        max-width: 200px;
+        max-width: 210px;
     }
 
 </style>
